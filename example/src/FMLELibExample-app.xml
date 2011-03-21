@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/2.0">
+	<id>FMLELibExample</id>
+	<filename>FMLELibExample</filename>
+	<name>FMLELibExample</name>
+	<version>v1</version>
+	<initialWindow>
+		<content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
+	</initialWindow>
+
+  <!-- YOU MUST USE extendedDesktop for NativeProcess to work. -->
+  <supportedProfiles>extendedDesktop</supportedProfiles>
+</application>
