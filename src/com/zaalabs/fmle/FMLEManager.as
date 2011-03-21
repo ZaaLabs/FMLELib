@@ -32,6 +32,8 @@ package com.zaalabs.fmle
             }
             else
             {
+				// Make sure you set the following in the application descriptor:
+				// <supportedProfiles>extendedDesktop</supportedProfiles>
                 trace("ERROR :: Native Process is not supported"); 
             }
         }
