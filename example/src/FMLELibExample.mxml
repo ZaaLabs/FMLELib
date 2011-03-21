@@ -17,10 +17,10 @@
             
             protected function onCreationComplete(event:FlexEvent):void
             {
+                // Path to the FMLEcmd executable
                 fmle = new FMLEManager(FMLEDefaultPath.MAC_v3_2);
                 var config:FMLEConfig = new FMLEConfig();
-                config.captureInputName = Camera.getCamera().name;
-                config.outputURL = "rtmp://8m02u97c1yaw.rtmphost.com/live";
+                config.outputURL = "rtmp://[YOURHOST]/live";
                 fmle.startEncoding("test", config);
             }
             
