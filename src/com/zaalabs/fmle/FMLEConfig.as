@@ -28,7 +28,7 @@ package com.zaalabs.fmle
         public var encodeOutputSize:String = "320x240;";
         
         // publish
-        public var outputURL:String = "rtmp:/";
+        public var outputURL:String = "rtmp:/live";
         public var outputURLBackup:String = "";
         public var outputStreamName:String = "test_stream";
         
