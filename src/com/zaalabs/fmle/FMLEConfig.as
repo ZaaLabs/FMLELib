@@ -42,7 +42,7 @@ package com.zaalabs.fmle
         
         // logging
         public var logLevel:int = 100;
-        public var logDirectory:String = File.userDirectory.nativePath + "/encoding/logs";
+        public var logDirectory:String = File.userDirectory.nativePath + File.separator + "encoding" + File.separator + "logs";
         
         //////////////////////////////////////////////////////////////////////////////
         // 
