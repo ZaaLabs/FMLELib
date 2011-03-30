@@ -2,6 +2,7 @@ package com.zaalabs.fmle
 {
     import flash.desktop.NativeProcess;
     import flash.desktop.NativeProcessStartupInfo;
+    import flash.events.Event;
     import flash.events.EventDispatcher;
     import flash.events.NativeProcessExitEvent;
     import flash.events.ProgressEvent;
@@ -103,6 +104,14 @@ package com.zaalabs.fmle
         {
             trace("onExit");
         }
+		
+		public function get isValidPath():Boolean
+		{
+			if(!_fmleFile)
+				return false;
+			
+			return _fmleFile.exists;
+		}
         
     }
 }
