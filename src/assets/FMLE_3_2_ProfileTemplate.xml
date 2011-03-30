@@ -8,6 +8,7 @@
     <capture>
         <video>
 	        <device>#{captureInputName}</device>
+	        <crossbar_input>0</crossbar_input>
 	        <frame_rate>#{captureFramerate}</frame_rate>
 	        <size>
 	            <width>#{captureWidth}</width>
