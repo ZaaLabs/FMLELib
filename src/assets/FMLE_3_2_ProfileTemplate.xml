@@ -28,9 +28,9 @@
         <outputsize>#{encodeOutputSize}</outputsize>
         <!-- H.264 advanced settings -->
         <advanced>
-            <profile>Main</profile>
-            <level>2.1</level>
-            <keyframe_frequency>5 Seconds</keyframe_frequency>
+            <profile>#{h264AdvancedProfile}</profile>
+            <level>#{h264AdvancedLevel}</level>
+            <keyframe_frequency>#{h264AdvancedKeyframeFreq}</keyframe_frequency>
         </advanced>
         <autoadjust>
             <enable>false</enable>

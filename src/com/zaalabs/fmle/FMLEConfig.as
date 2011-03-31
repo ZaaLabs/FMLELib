@@ -32,6 +32,11 @@ package com.zaalabs.fmle
         public var outputURLBackup:String = "";
         public var outputStreamName:String = "test_stream";
         
+        // H.264 Advanced
+        public var h264AdvancedLevel:String = "2.1";
+        public var h264AdvancedProfile:String = "Main";
+        public var h264AdvancedKeyframeFreq:String = "5 Seconds";
+        
         // metadata
         public var metaAuthor:String = "";
         public var metaCopyright:String = "";
