@@ -23,19 +23,17 @@ package com.zaalabs.fmle
         public var captureHeight:int = 240;
         
         // encode
-        public var encodeFormat:String = "H.264";
+        public var encodeFormat:String = EncodeCodec.H264;
         public var encodeDataRate:String = "200;";
         public var encodeOutputSize:String = "320x240;";
+        
+        // Advanced Settings
+        public var advanced:IAdvancedSettings = new SettingsH264();
         
         // publish
         public var outputURL:String = "rtmp:/live";
         public var outputURLBackup:String = "";
         public var outputStreamName:String = "test_stream";
-        
-        // H.264 Advanced
-        public var h264AdvancedLevel:String = "2.1";
-        public var h264AdvancedProfile:String = "Main";
-        public var h264AdvancedKeyframeFreq:String = "5 Seconds";
         
         // metadata
         public var metaAuthor:String = "";
@@ -55,6 +53,26 @@ package com.zaalabs.fmle
         //
         //////////////////////////////////////////////////////////////////////////////
         
+        public function get codec():String
+        {
+            return encodeFormat;
+        }
+
+        public function set codec(value:String):void
+        {
+            encodeFormat = value;
+            
+            switch(encodeFormat)
+            {
+                case EncodeCodec.H264:
+                    advanced = new SettingsH264();
+                    break;
+                case EncodeCodec.VP6:
+                    advanced = new SettingsVP6();
+                    break;
+            }
+        }
+
         public function toXML():XML
         {
             var fields:Array = getFields();

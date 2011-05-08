@@ -2,7 +2,6 @@ package com.zaalabs.fmle
 {
     import flash.desktop.NativeProcess;
     import flash.desktop.NativeProcessStartupInfo;
-    import flash.events.Event;
     import flash.events.EventDispatcher;
     import flash.events.NativeProcessExitEvent;
     import flash.events.ProgressEvent;
@@ -97,7 +96,9 @@ package com.zaalabs.fmle
         
         protected function onErrorData(event:ProgressEvent):void
         {
-            trace("onError");
+            trace("== ERROR == ");
+            var process:FMLEProcess = FMLEProcess(event.target);
+            trace(process.id + " :: "+ process.standardError.readUTFBytes(process.standardError.bytesAvailable));
         }
         
         protected function onExit(event:NativeProcessExitEvent):void

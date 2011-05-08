@@ -26,12 +26,8 @@
         <format>#{encodeFormat}</format>
         <datarate>#{encodeDataRate}</datarate>
         <outputsize>#{encodeOutputSize}</outputsize>
-        <!-- H.264 advanced settings -->
-        <advanced>
-            <profile>#{h264AdvancedProfile}</profile>
-            <level>#{h264AdvancedLevel}</level>
-            <keyframe_frequency>#{h264AdvancedKeyframeFreq}</keyframe_frequency>
-        </advanced>
+        <!-- Insert advanced settings -->
+        #{advanced}
         <autoadjust>
             <enable>false</enable>
             <maxbuffersize>1</maxbuffersize>
